@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+      }
+      #todoList {
+        width: 350px;
+        height: 600px;
+        margin: 100px auto;
+        padding: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+      }
+      .checked {
+        text-decoration: line-through;
+      }
+
+      ul {
+        list-style: none;
+      }
+
+      ul li {
+        padding: 20px 0 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="todoList">
+      <h1>To-do List</h1>
+      <input type="text" v-model.trim="todo" v-on:keyup.enter="addTodo" />
+      <button v-on:click="addTodo">추가</button>
+      <!-- <ul id="todoList"> -->
+      <ul>
+        <li v-for="item in items">
+          <input type="checkbox" v-on:click="doneToggle(item.id)" />
+          <span v-bind:class="checked(item.done)">{{item.todo}}</span>
+          <button v-on:click="deleteTodo(item.id)">삭제</button>
+        </li>
+      </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      var todoList = new Vue({
+        el: '#todoList',
+        data: {
+          todo: '',
+          items: [
+            { id: 1, todo: '출근하기', done: false },
+            { id: 2, todo: '과제하기', done: false },
+            { id: 3, todo: '걷기', done: false },
+          ],
+        },
+        methods: {
+          checked: function (done) {
+            if (done)
+              return {
+                checked: true,
+              };
+            else
+              return {
+                checked: false,
+              };
+          },
+          addTodo: function (e) {
+            if (this.todo.trim() != '') {
+              this.items.push({
+                id: new Date().getTime(),
+                todo: this.todo.trim(),
+                done: false,
+              });
+              this.todo = '';
+            }
+          },
+          deleteTodo: function (id) {
+            var index = this.items.findIndex(function (item) {
+              return item.id === id;
+            });
+            this.items.splice(index, 1);
+          },
+          doneToggle: function (id) {
+            var index = this.items.findIndex(function (item) {
+              return item.id === id;
+            });
+            this.items[index].done = !this.items[index].done;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
