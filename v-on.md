@@ -1,4 +1,4 @@
-# v-on
+# v-on(v-on:click => @click으로도 사용)
 
 ```
 // App.vue
