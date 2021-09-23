@@ -1,6 +1,8 @@
 # Transition
 
-vue transition 관련 공식 사이트: https://kr.vuejs.org/v2/guide/transitions.html#%ED%8A%B8%EB%9E%9C%EC%A7%80%EC%85%98-%ED%81%B4%EB%9E%98%EC%8A%A4
+vue transition 관련 공식 사이트: 
+- https://kr.vuejs.org/v2/guide/transitions.html
+- https://kr.vuejs.org/v2/guide/transitions.html#%ED%8A%B8%EB%9E%9C%EC%A7%80%EC%85%98-%ED%81%B4%EB%9E%98%EC%8A%A4
 
 ```
 <template>
