@@ -1,0 +1,59 @@
+# Vuex
+- Vuex 라이브러리 등장 배경인 Flux
+- Vuex 라이브러리 주요 속성 state, getters, mutations, actions(data, computed, methods, 비동기 methods)
+- Vuex를 더 쉽게 코딩할 수 있는 Helper 함수
+> view component-> actions -> mutations -> state(컴포넌트->비동기 로직->동기 로직->상태)
+
+# Flux 패턴(단방향)
+- MVC 패턴(model-view 양방향)의 복잡한 데이터 흐름 문제를 해결하는 개발 패턴 - Unidirectional data flow
+> [ Action -> dispatcher -> Model(Store) -> View ]
+> - action : 화면에서 발생하는 이벤트 또는 사용자의 입력
+> - dispatcher : 데이터를 변경하는 방법, 메서드(Model 변경)
+> - model : 화면에 표시할 데이터
+> - view : 사용자에게 비춰지는 화면(view가 action 호출)
+
+# Vuex 기술 요소
+- state: 여러 컴포넌트에 공유되는 data
+- getters: 연산된 state 값을 접근하는 속성 computed
+- mutations:
+
+# Vuex 설치하기
+> npm install vuex --save
+
+# Store 등록
+파일구조|store.js 코드
+---------------------|------------------------------------------------------------------------------------------------------
+![image](https://user-images.githubusercontent.com/61729276/134608939-605428ed-caf2-44ab-8b59-a182f660c866.png)|![image](https://user-images.githubusercontent.com/61729276/134611602-9eee9c59-fd25-4686-b274-3d1d26fda1aa.png) 
+
+```
+// store.js
+import Vue from 'vue'
+import Vuex from 'vuex'
+
+Vue.use(Vuex);
+//뷰 플러그인 사용, 뷰 사용 시 전역으로 특정 기능 추가하고 싶을 때
+
+// Todo.vue=> this.$store
+
+export const store = new Vuex.Store({
+
+});
+```
+
+```
+// main.js
+import Vue from 'vue'
+import App from './App.vue'
+import { store } from './store/store'
+
+// Vue.config.productionTip = false
+
+new Vue({
+        el: '#app',
+        store, //store : store 축약
+        render: h => h(App),
+    })
+    // .$mount('#app')
+```
+
+
