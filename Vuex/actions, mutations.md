@@ -7,24 +7,37 @@
 
 import Vue from 'vue';
 import Vuex from 'vuex';
-import {fetchNewsList} from '../api/index.js';  // api index.js에 정리해둔 api함수
+import { fetchNewsList, fetchJobsList, fetchAskList } from "../api/index.js";
+// api index.js에 정리해둔 api함수
 
 Vue.use(Vuex); 
 
 export const store = new Vuex.Store({
   state:{
-    news: []
+    news: [],
+    jobs: [],
   },
   actions: {
-    FETCH_NEWS(){
+    FETCH_NEWS(context){
       fetchNewsList()   // fetchNewsList(api) 이용해서 정보 
         .then(response => {
           console.log(response);
+          context.commit("SET_NEWS", response.data);
         })
         .catch(error => {
           console.log(error);
         })
-    }
+    },
+    FETCH_JOBS({commit}) { // context 대신 {commit} 넣기
+      fetchJobsList()
+        .then(({ data }) => {  // response가 아니라 ({data})를 넣어준다 : 디스럭처링
+          // console.log(response);
+          commit("SET_JOBS", data);  // response.data가 아니라 data 바로 사용 가능, context.commit 아니라 commit 바로 사용 가능
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    },
   }
 })
 
