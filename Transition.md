@@ -1,4 +1,4 @@
-# Transition
+# Transition(애니메이션 속도를 조절하는 방법을 제공)
 
 vue transition 관련 공식 사이트: 
 - https://kr.vuejs.org/v2/guide/transitions.html
