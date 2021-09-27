@@ -46,15 +46,15 @@ export const router = new VueRouter({ // export로 내보내주기
   routes: [
     { // path: url 주소, component: url에 해당하는 컴포넌트(페이지)
     path: '/news',
-    component: 'NewsView',
+    component: NewsView,
     },
     { 
-    path: 'ask',
-    component: 'AskView',
+    path: '/ask',
+    component: AskView,
     },
     { 
-    path: '',
-    component: '',
+    path: '/jobs',
+    component: JobsView,
     },
     
   ]
