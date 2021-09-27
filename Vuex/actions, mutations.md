@@ -33,8 +33,8 @@ export const store = new Vuex.Store({
 - 실제 컴포넌트에서 사용(dispatch사용해서 actions 부르기)
 
 ```javascript
-
 // NewsView.vue
+
 <script>
 export default{
   data(){
