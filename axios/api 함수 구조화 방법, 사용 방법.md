@@ -40,7 +40,7 @@ export {
     created(){
       fetchNewsList()
         .then(response => this.users = response.data)
-        .catch()
+        .catch(error => console.log(error));
     }
   }
 </script>
