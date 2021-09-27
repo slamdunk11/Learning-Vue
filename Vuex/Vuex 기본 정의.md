@@ -18,6 +18,9 @@
 - mutations: state 값을 변경하는 이벤트 로직, 메서드 methods
 - actions: 비동기 처리 로직을 선언하는 메서드 aysnc methods
 
+![image](https://user-images.githubusercontent.com/61729276/134865038-5e8d1650-afc4-4e81-b715-0c267e5881d1.png) 
+
+
 # state
 ```
 // Vue
