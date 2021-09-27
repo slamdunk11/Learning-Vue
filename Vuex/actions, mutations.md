@@ -72,7 +72,7 @@ export const store = new Vuex.Store({
     SET_NEWS(state, news){ // response.data를 news로 받음 
       state.news = news;
     }
-  }
+  },
   actions: {
     FETCH_NEWS(context){
       fetchNewsList()
