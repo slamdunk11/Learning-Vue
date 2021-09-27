@@ -4,7 +4,7 @@
 터미널
 npm i vue-router --save
 ```
-- main.js에 router 정리할 수 있지만 X, router 위주 파일이 될 수 있어 
+- main.js에 router 정리할 수 있지만 X, router 위주 파일이 될 수 있어 별로다 
 ```javascript
 // main.js
 
