@@ -3,7 +3,7 @@
 npm i axios --save
 ```
 
-```javasript
+```javascript
 <script>
 import axios from 'axios';
 
