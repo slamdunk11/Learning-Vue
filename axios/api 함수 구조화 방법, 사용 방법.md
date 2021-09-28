@@ -23,7 +23,7 @@ export {
 }
 
 ```
-- 실제 컴포넌트에 api폴더 index.js 적용
+- 실제 컴포넌트에 api폴더 index.js 적용(나중에 vuex 이용해서 정리)
 ```javascript
 // NewsView
 
