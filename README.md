@@ -4,5 +4,7 @@ https://www.inflearn.com/course/vue-js/dashboard
 로 공부하고 있습니다!
 
 
-#### 그 밖의 참고 자료
+#### 그 밖의 참고 자료, 출처
 - https://vuex.vuejs.org/kr/
+- https://joshua1988.github.io/web-development/vuejs/v-model-usage/
+ 
