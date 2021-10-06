@@ -88,6 +88,8 @@ this.$store.commit('sumNumbers', 20);
 > npm install vuex --save
 
 # Store 등록
+- src 폴더 밑에 store 폴더-> store.js 
+
 파일구조|store.js 코드
 ---------------------|------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/61729276/134608939-605428ed-caf2-44ab-8b59-a182f660c866.png)|![image](https://user-images.githubusercontent.com/61729276/134611602-9eee9c59-fd25-4686-b274-3d1d26fda1aa.png) 
