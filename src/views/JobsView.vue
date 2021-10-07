@@ -1,12 +1,17 @@
 <template>
   <div>
-    <router-view></router-view>
+    jobs
   </div>
 </template>
 
 <script>
 export default {
-  
+  name: 'VuePerfectJobsview',
+
+  components: { ComponentName },
+
+  directives: { DirectiveName },
+
   data() {
     return {
       
@@ -23,6 +28,6 @@ export default {
 };
 </script>
 
-<style coped>
+<style lang="scss" scoped>
 
 </style>

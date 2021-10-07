@@ -1,12 +1,12 @@
 <template>
   <div>
-    <router-view></router-view>
+    ask
   </div>
 </template>
 
 <script>
 export default {
-  
+
   data() {
     return {
       
@@ -23,6 +23,6 @@ export default {
 };
 </script>
 
-<style coped>
+<style lang="scss" scoped>
 
 </style>
