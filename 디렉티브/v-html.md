@@ -1,4 +1,7 @@
 # v-html
+- html 코드를 직접적으로 입력해줄 때 사용되는 디렉티브
+- html코드를 출력해줘야하는데 화면에 그러면 태그들까지 다 나와버리니까...!
+- 그럴 때 v-html
 ```javascript
 // Component
 <template>
@@ -63,3 +66,7 @@ export default new Vuex.Store({
     actions,
 })
 ```
+
+### 참고
+- https://vuejs.org/v2/api/#v-html
+- https://vuejs.org/v2/guide/syntax.html#Raw-HTML
